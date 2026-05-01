@@ -467,8 +467,8 @@
           <textarea class="form-input" name="message" placeholder="Décrivez votre projet, vos objectifs, votre délai souhaité..."></textarea>
         </div>
 
-        <!-- reCAPTCHA -->
-    <div class="g-recaptcha" data-sitekey="6LdFd9QsAAAAACh9vXFlKXlGXy8Xc8oFzEyr43WV"></div>
+        <!-- reCAPTCHA 
+    <div class="g-recaptcha" data-sitekey="6LdFd9QsAAAAACh9vXFlKXlGXy8Xc8oFzEyr43WV"></div>-->
 
         <button class="form-submit">Envoyer ma demande →</button>
       </div>
@@ -526,8 +526,8 @@
 
 <!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<!-- Google reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- Google reCAPTCHA 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 
 <script>
     // Initialisation EmailJS avec ton User ID
@@ -543,12 +543,12 @@
         status.textContent = "Envoi en cours...";
 
         // Vérifier si reCAPTCHA est validé
-        const recaptchaResponse = grecaptcha.getResponse();
-        if (!recaptchaResponse) {
-            status.textContent = "⚠️ Veuillez valider le reCAPTCHA.";
-            status.className = "error";
-            return;
-        }
+       // const recaptchaResponse = grecaptcha.getResponse();
+        //if (!recaptchaResponse) {
+          //  status.textContent = "⚠️ Veuillez valider le reCAPTCHA.";
+         //   status.className = "error";
+         //   return;
+       // }
 
         emailjs.sendForm("service_t5kz4se", "template_yfs1lnm", this)
             .then(function() {
